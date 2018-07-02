@@ -28,50 +28,42 @@ knitr::opts_chunk$set(echo = TRUE)
 --
 
 ```{r, out.width = "600px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("https://media.giphy.com/media/WM4jVa0RWdAVa/giphy.gif") 
+knitr::include_graphics("modern-family.gif") 
 ```
 
 ---
 ## The importance of institutions for economic complexity.
 
-* Institutional economists (e.g., Nobel Prize winner Douglass North) stress the importance of institutions for economic development.
+* Institutional economists (e.g., Nobel Prize winner [Douglass North](https://en.wikipedia.org/wiki/Douglass_North)) stress the importance of institutions for economic development.
 
 --
 
-* Similar questions in anthropology (e.g., Lenksi, 1974) and sociology (e.g., in functionalism of Talcott Parsons (1951)) .
+* Similar questions addressed in sociology (e.g., functionalism of Parsons (1951), Lenksi's Ecological-Evolutionary Theory (1974/2006)).
 
 ---
-## Ongoing debate
+## Ongoing related debate in anthropology?
 
-* The relative importance of culture versus ecology for 'societal complexity'. 
+* The relative importance of culture versus ecology for behavioural variation. 
 
 --
 
 ```{r, out.width = "600px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("Mathew_and_Pereault.png") # replace with screenshot of WNAI-D paper
+knitr::include_graphics("Mathew_and_Pereault.png") #  WNAI-D paper
 ``` 
 
 ---
 ## Research question
 
-* 'Big question': What are the prerequisites for economic development.
+* Can we predict 'economic complexity' (or a proxy thereof).
 
 --
 
-* Relative importance
+* Relative importance of 'ecology' vs. 'culture'. (Which is potentially a misnomer).
 
 --
 
-* Macro-economists emphasize the importance of the rule of law.
+* Macro-economists emphasize the importance of .
 
----
-## Machine learning
-
-* 
-
-```{r, out.width = "600px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("https://media.giphy.com/media/O1kl1e6R4SCoE/giphy.gif") 
-```
 
 ---
 ## Ethnographic atlas
@@ -83,7 +75,7 @@ knitr::include_graphics("ethnographic-atlas.png")
 ---
 ## Data cleaning
 
-*  Technical variables (e.g., ID variable for the SCCS) from the dataset. 
+*  Technical variables (e.g., ID variable for the SCCS) were removed from the dataset. 
 
 --
 
@@ -96,7 +88,11 @@ knitr::include_graphics("ethnographic-atlas.png")
 ---
 ## Coding
 
---
+* Broad categories: Culture / Ecology / none (e.g., Language class)
+
+* Narrower categories.
+
+* More narrow coding of cultural variables.
 
 ---
 ## Dependent Variable
@@ -105,7 +101,7 @@ knitr::include_graphics("ethnographic-atlas.png")
 
 --
 
-* Treated as an ordinal variable with 8 categories in the key analyses. Continuous for some Figures. 
+* Treated as an ordinal variable with 8 categories in the key analyses. Continuous for some figures. 
 
 --
 
@@ -160,9 +156,6 @@ Some key benefits:
 ---
 ## Descriptives
 
-* 138 variables.
-
---
 
 ```{r, out.width = "800px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("Figure1-19-5-edited.png") 
@@ -187,7 +180,7 @@ knitr::include_graphics("Figure2-19-5.png")
 
 -- 
 
-* Variables which account
+* With and without 7 variables (country_Codes, Area_Region, SubContinent_Region, Continent, Language_Continent, Old_New_Class, Region)
 
 ---
 ## Results: Variable importance
@@ -197,7 +190,11 @@ knitr::include_graphics("Figure3-panelled-19-5-edited.png") #Figure 3
 ```
 
 ---
-## Results: A closer look.
+## Results: A closer look (top 10).
+
+```{r, out.width = "500px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("zoom-importance.png") #Figure 3
+```
 
 ---
 ## What does it all mean?
@@ -230,7 +227,7 @@ knitr::include_graphics("Figure5B-19-5.png")
 
 --
 
-* 
+* (Provided we can meaningfully disentangle). 'Ecology' is on a par with 'culture'
 
 ---
 ## Limitations
@@ -260,19 +257,19 @@ knitr::include_graphics("Lee1984-objection.png")
 ---
 ## Future work
 
-* Machine learning challenge? How do other methods do?
+* Machine learning challenge? How do other methods do (support vector machines)?
 
 --
 
-* A potential reanalysis of WNAI-D
+* A potential reanalysis of WNAI-D? Analysis of [Seshat](http://seshatdatabank.info/)?
 
 --
 
-* 'Qualitative Comparative Analysis'. (necessary and sufficient causality)
+* ['Qualitative Comparative Analysis'](https://cran.r-project.org/web/packages/QCA/QCA.pdf). (necessary and sufficient conditions for causal inference)
 
 --
 
-* Phylogenetic work (Mathijs was working with Andrew Meade)
+* Phylogenetic work (Mathijs van Dijk was working with Andrew Meade)
 
 ---
 ##Any Questions?
