@@ -38,12 +38,12 @@ knitr::include_graphics("modern-family.gif")
 
 --
 
-* Similar questions addressed in sociology (e.g., functionalism of Parsons (1951), Lenksi's Ecological-Evolutionary Theory (1974/2006)).
+* Similar questions addressed in sociology (e.g., functionalism of Parsons (1951), Lenksi's Ecological-Evolutionary Theory (1974/2006) -  also see [Sanderson (1990)](https://books.google.nl/books?id=m7KpQgAACAAJ&hl=nl&source=gbs_ViewAPI&redir_esc=y)).
 
 ---
 ## Ongoing related debate in anthropology?
 
-* The relative importance of culture versus ecology for behavioural variation. 
+* The relative importance of culture (social learning) versus ecology for behavioural variation. 
 
 --
 
@@ -58,11 +58,11 @@ knitr::include_graphics("Mathew_and_Pereault.png") #  WNAI-D paper
 
 --
 
-* Relative importance of 'ecology' vs. 'culture'. (Which is potentially a misnomer).
+* Relative importance of 'ecology' vs. 'culture'. (Which is potentially quite a misnomer).
 
 --
 
-* Macro-economists emphasize the importance of .
+* Macro-economists emphasize the importance of institutions. What is the evidence for this? 
 
 
 ---
@@ -136,9 +136,9 @@ Some key benefits:
 3) Recursively repeate steps 1) and 2)."  Hothorn et al., 2014: 8
 
 ---
-## (Conditional) Random Forests
+## (Conditional) Random Forests via Party
 
-* Build a large number of these trees!
+* Build a large number of these trees! (N=500).
 
 --
 
@@ -147,6 +147,10 @@ Some key benefits:
 --
 
 * Analyses suggest that these models are on a par or regularly outperform other machine learning methods (e.g., [Karuna et al. 2008](http://lowrank.net/nikos/pubs/empirical.pdf)). [Lay explanation](https://medium.com/rants-on-machine-learning/the-unreasonable-effectiveness-of-random-forests-f33c3ce28883)
+
+--
+
+* We used the ['party' package](https://cran.r-project.org/web/packages/party/party.pdf) in R.
 
 ---
 ## Variable importance
@@ -176,9 +180,9 @@ knitr::include_graphics("Figure2-19-5.png")
 
 --
 
-* Varied 'varimp' and 'ntrees'.
+* Varied 'mtry' (e.g., 46) and 'ntrees' (e.g., N=1,000) qualitatively same results
 
--- 
+--
 
 * With and without 7 variables (country_Codes, Area_Region, SubContinent_Region, Continent, Language_Continent, Old_New_Class, Region)
 
@@ -190,11 +194,19 @@ knitr::include_graphics("Figure3-panelled-19-5-edited.png") #Figure 3
 ```
 
 ---
-## Results: A closer look (top 10).
+## Results: A closer look at variable importance (top 10).
 
-```{r, out.width = "500px", echo=FALSE, fig.align='center'}
+```{r, out.width = "800px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("zoom-importance.png") #Figure 3
 ```
+
+---
+## Grouping by broad categories.
+
+```{r, out.width = "800px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("Figure4A-19-5.png") #Figure 4
+```
+
 
 ---
 ## What does it all mean?
@@ -205,14 +217,14 @@ knitr::include_graphics("zoom-importance.png") #Figure 3
 ---
 ## Results: Agriculture
 
-```{r, out.width = "600px", echo=FALSE, fig.align='center'}
+```{r, out.width = "800px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("Figure5A-19-5.png") 
 ```
  
 ---
 ## Results: Subsistence economy
 
-```{r, out.width = "600px", echo=FALSE, fig.align='center'}
+```{r, out.width = "800px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("Figure5B-19-5.png") 
 ```
 
@@ -302,3 +314,10 @@ knitr::include_graphics("https://media.giphy.com/media/10avZ0rqdGFyfu/giphy.gif"
 Each tree is constructed using a different bootstrap sample from the original data. About one-third of the cases are left out of the bootstrap sample and not used in the construction of the kth tree.
 
 Put each case left out in the construction of the kth tree down the kth tree to get a classification. In this way, a test set classification is obtained for each case in about one-third of the trees. At the end of the run, take j to be the class that got most of the votes every time case n was oob. The proportion of times that j is not equal to the true class of n averaged over all cases is the oob error estimate. This has proven to be unbiased in many tests."
+
+---
+## Overfitting / Why no cross-validation (bis)?
+
+* This approach does not overfit.
+
+*  "This statistical approach ensures that the right sized tree is grown and no form of pruning or cross-validation or whatsoever is needed." (from [here](https://cran.r-project.org/web/packages/party/party.pdf))
