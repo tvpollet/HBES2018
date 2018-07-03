@@ -238,7 +238,9 @@ knitr::include_graphics("Figure4C-19-5-edited.png") #Figure 4
 ---
 ## What does it all mean?
 
-* Forests are not really interpretable. Remains a black box. Some sample univariate trees --> note exploratory. (Alternatives are partial dependence plots)
+* Forests are not really interpretable. Remains a black box. 
+
+* Some sample univariate trees --> note exploratory. (Alternative: partial dependence plots).
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center', fig.cap="https://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning"}
 knitr::include_graphics("machine_learning.png") 
