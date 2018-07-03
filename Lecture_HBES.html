@@ -83,7 +83,11 @@ class: center, middle, inverse, title-slide
 
 --
 
-*  Some variables which were derived from other variables + some variables which proved to be problematic in a preliminary screening (for example due to a high percentage of missing cases or nominal variables with nearly unique codes).  
+*  Some variables which were derived from other variables 
+
+--
+
+* Some variables which proved to be problematic in a preliminary screening (for example due to a high percentage of missing cases or nominal variables with nearly unique codes).  
 
 --
 
@@ -109,7 +113,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-* “Fully migratory or nomadic bands / Separated hamlets where several such form a more or less permanent single community. / Neighborhoods of dispersed family homesteads / Seminomadic communities whose members wander in bands for at least half of the year but occupy a fixed settlement at some season or seasons, e.g., recurrently occupied winter quarters / Semisedentary communities whose members shift from one to another fixed settlement at different seasons or who occupy more  or less permanently a single settlement from which a substantial proportion of the population departs seasonally to occupy shifting camps, e.g., during transhumance. + Compact and relatively permanent settlements, i.e., nucleated villages or towns. / Compact but impermanent settlements, i.e., villages whose location is shifted every few years. / Complex settlements consisting of a nucleated village or town with outlying homesteads or satellite hamlets.”). 
+* “Fully migratory or nomadic bands / Separated hamlets where several such form a more or less permanent single community. / Neighborhoods of dispersed family homesteads / Seminomadic communities whose members wander in bands for at least half of the year but occupy a fixed settlement at some season or seasons, e.g., recurrently occupied winter quarters / Semisedentary communities whose members shift from one to another fixed settlement at different seasons or who occupy more  or less permanently a single settlement from which a substantial proportion of the population departs seasonally to occupy shifting camps, e.g., during transhumance. + Compact and relatively permanent settlements, i.e., nucleated villages or towns. / Compact but impermanent settlements, i.e., villages whose location is shifted every few years. / Complex settlements consisting of a nucleated village or town with outlying homesteads or satellite hamlets.” 
 
 ---
 ## Method: Ctree (party package)
@@ -120,7 +124,7 @@ class: center, middle, inverse, title-slide
 
 2) Implement a binary split in the selected input variable. 
 
-3) Recursively repeate steps 1) and 2)."  Hothorn et al., 2014: 8
+3) Recursively repeate steps 1) and 2)."  [Hothorn et al., 2018: 8](https://cran.r-project.org/web/packages/party/party.pdf)
 
 ---
 ## Method: benefits?
@@ -137,7 +141,7 @@ Some key benefits:
 
 --
 
-* BUT: trees are 'truly random'
+* BUT: trees are 'truly random' --&gt; Forests.
 
 ---
 ## (Conditional) Random Forests via Party
@@ -146,7 +150,7 @@ Some key benefits:
 
 --
 
-* A commonly used tool for small N large P problems. (137 predictors)
+* A commonly used tool for small N large P problems. (137 predictors! , (combination of) 30 considered at each split (['mtry'](https://www.stat.berkeley.edu/~breiman/Using_random_forests_v4.0.pdf)))
 
 --
 
@@ -230,6 +234,8 @@ More information in the [party manual](https://cran.r-project.org/web/packages/p
 
 * Forests are not really interpretable. Remains a black box. 
 
+--
+
 * Some sample univariate trees --&gt; note exploratory. (Alternative: partial dependence plots).
 
 &lt;div class="figure" style="text-align: center"&gt;
@@ -249,7 +255,7 @@ More information in the [party manual](https://cran.r-project.org/web/packages/p
 &lt;img src="Figure5B-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
 
 ---
-## Results: Sample tree
+## Results: [Sample tree](https://tvpollet.github.io/HBES2018/Figure6A-19-5.pdf)
 
 &lt;img src="Figure6A-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
 
