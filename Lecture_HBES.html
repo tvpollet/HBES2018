@@ -54,11 +54,11 @@ class: center, middle, inverse, title-slide
 ---
 ## Research question
 
-* Can we predict 'economic complexity' (or a proxy thereof)?
+* Can we predict 'economic complexity' (or a proxy thereof)? How well does 'AI' do?
 
 --
 
-* Relative importance of 'ecology' vs. 'culture'. (Which is potentially quite a misnomer).
+* Relative importance of 'ecology' vs. 'culture'. (Which is potentially quite a misnomer... .).
 
 --
 
@@ -106,7 +106,18 @@ class: center, middle, inverse, title-slide
 * “Fully migratory or nomadic bands / Separated hamlets where several such form a more or less permanent single community. / Neighborhoods of dispersed family homesteads / Seminomadic communities whose members wander in bands for at least half of the year but occupy a fixed settlement at some season or seasons, e.g., recurrently occupied winter quarters / Semisedentary communities whose members shift from one to another fixed settlement at different seasons or who occupy more  or less permanently a single settlement from which a substantial proportion of the population departs seasonally to occupy shifting camps, e.g., during transhumance. + Compact and relatively permanent settlements, i.e., nucleated villages or towns. / Compact but impermanent settlements, i.e., villages whose location is shifted every few years. / Complex settlements consisting of a nucleated village or town with outlying homesteads or satellite hamlets.”). 
 
 ---
-## Method: Machine learning via 'ctree'.
+## Method: Ctree (party package)
+
+"Conditional inference trees estimate a regression relationship by binary recursive partitioning in a conditional inference framework. Roughly, the algorithm works as follows: 
+
+1) Test the global null hypothesis of independence between any of the input variables and the response (which may be multivariate as well). Stop if this hypothesis cannot be rejected. Otherwise select the input variable with strongest association to the response. This association is measured by a p-value corresponding to a test for the partial null hypothesis of a single input variable and the response. 
+
+2) Implement a binary split in the selected input variable. 
+
+3) Recursively repeate steps 1) and 2)."  Hothorn et al., 2014: 8
+
+---
+## Method: benefits?
 
 Some key benefits:
 
@@ -123,24 +134,13 @@ Some key benefits:
 * BUT: trees are 'truly random'
 
 ---
-## Ctree
-
-"Conditional inference trees estimate a regression relationship by binary recursive partitioning in a conditional inference framework. Roughly, the algorithm works as follows: 
-
-1) Test the global null hypothesis of independence between any of the input variables and the response (which may be multivariate as well). Stop if this hypothesis cannot be rejected. Otherwise select the input variable with strongest association to the response. This association is measured by a p-value corresponding to a test for the partial null hypothesis of a single input variable and the response. 
-
-2) Implement a binary split in the selected input variable. 
-
-3) Recursively repeate steps 1) and 2)."  Hothorn et al., 2014: 8
-
----
 ## (Conditional) Random Forests via Party
 
 * Build a large number of these trees! (N=500).
 
 --
 
-* A commonly used tool for small N large P problems.
+* A commonly used tool for small N large P problems. (137 predictors)
 
 --
 
@@ -155,11 +155,24 @@ Some key benefits:
 
 "More precisely, it measures the difference between the OOB error rate after and before permuting the values of the predictor of interest. ...  The idea underlying this VIM is the following: If the predictor is not associated with the response, the permutation of its values has no influence on the classification, and thus also no influence on the error rate. The error rate of the forest is not substantially affected by the permutation and the VI of the predictor takes a value close to zero, indicating no association between the predictor and the response. In contrast, if response and predictor are associated, the permutation of the predictor values destroys this association. **“Knocking out” this predictor by permuting its values results in a worse classification leading to an increased error rate.** The difference in error rates before and after randomly permuting the predictor thus takes a positive value reflecting the high importance of this predictor" Janitza et al. 2013, _BMC Bioinformatics_: p. 3
 
+--
+
+More information in the [party manual](https://cran.r-project.org/web/packages/party/party.pdf) and [here]()
+
 ---
 ## Map
 
 
 &lt;img src="Figure1-19-5-edited.png" width="900px" style="display: block; margin: auto;" /&gt;
+
+---
+## Performance: Spearman's `\(\rho\)`
+
+* The Spearman `\(\rho\)` correlations between the observed and predicted values were .815 for run 1 and .812 for run 2 of the full model. 
+
+* For the reduced models, these correlations were .810 for run 1 and .808 for run 2, respectively.
+
+* Is that good or bad?
 
 ---
 ## Performance: Bland-Altman plot
@@ -170,7 +183,7 @@ Some key benefits:
 ---
 ## Robustness checks
 
-* Different starting seeds yield similar results.
+* Different starting seeds yield similar results. (Correspondence between two runs for variable importance was very high (Full: Pearson r= .997, Spearman `\(\rho\)`= .938; Reduced: Pearson r= .996, Spearman `\(\rho\)`= .927)
 
 --
 
