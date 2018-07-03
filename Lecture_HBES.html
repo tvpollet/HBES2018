@@ -13,7 +13,7 @@ class: center, middle, inverse, title-slide
 
 # Machine learning demonstrates that ecology is at least as important as culture in predicting societal complexity
 ### Thomas Pollet, Northumbria University &amp; Mathijs van Dijk, Erasmus University Rotterdam
-### 2018-07-02 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2018-07-03 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 
 ---
 
@@ -54,7 +54,7 @@ class: center, middle, inverse, title-slide
 ---
 ## Research question
 
-* Can we predict 'economic complexity' (or a proxy thereof).
+* Can we predict 'economic complexity' (or a proxy thereof)?
 
 --
 
@@ -156,10 +156,10 @@ Some key benefits:
 "More precisely, it measures the difference between the OOB error rate after and before permuting the values of the predictor of interest. ...  The idea underlying this VIM is the following: If the predictor is not associated with the response, the permutation of its values has no influence on the classification, and thus also no influence on the error rate. The error rate of the forest is not substantially affected by the permutation and the VI of the predictor takes a value close to zero, indicating no association between the predictor and the response. In contrast, if response and predictor are associated, the permutation of the predictor values destroys this association. **“Knocking out” this predictor by permuting its values results in a worse classification leading to an increased error rate.** The difference in error rates before and after randomly permuting the predictor thus takes a positive value reflecting the high importance of this predictor" Janitza et al. 2013, _BMC Bioinformatics_: p. 3
 
 ---
-## Descriptives
+## Map
 
 
-&lt;img src="Figure1-19-5-edited.png" width="800px" style="display: block; margin: auto;" /&gt;
+&lt;img src="Figure1-19-5-edited.png" width="900px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Performance: Bland-Altman plot
@@ -191,15 +191,30 @@ Some key benefits:
 &lt;img src="zoom-importance.png" width="800px" style="display: block; margin: auto;" /&gt;
 
 ---
-## Grouping by broad categories.
+## Grouping by broad categories
 
 &lt;img src="Figure4A-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
+
+---
+## Grouping by narrower categories
+
+&lt;img src="Figure4B-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
+
+---
+## Grouping by narrower categories within culture
+
+&lt;img src="Figure4C-19-5-edited.png" width="800px" style="display: block; margin: auto;" /&gt;
 
 
 ---
 ## What does it all mean?
 
-* Forests are not really intepretable. Remains a black box. Some sample univariate trees --&gt; note exploratory. (Alternatives are partial dependence plots)
+* Forests are not really interpretable. Remains a black box. Some sample univariate trees --&gt; note exploratory. (Alternatives are partial dependence plots)
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="machine_learning.png" alt="https://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning" width="300px" /&gt;
+&lt;p class="caption"&gt;https://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning&lt;/p&gt;
+&lt;/div&gt;
 
 
 ---
@@ -213,6 +228,11 @@ Some key benefits:
 &lt;img src="Figure5B-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
 
 ---
+## Results: Sample tree
+
+&lt;img src="Figure6A-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
+
+---
 ## Conclusion
 
 * Subsistence economy/agriculture best predictors. Unsurprising conclusion perhaps?
@@ -223,7 +243,7 @@ Some key benefits:
 
 --
 
-* (Provided we can meaningfully disentangle). 'Ecology' is on a par with 'culture'
+* (Provided we can meaningfully disentangle). 'Ecology' is on a par with 'culture'.
 
 ---
 ## Limitations

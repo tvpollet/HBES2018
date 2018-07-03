@@ -54,7 +54,7 @@ knitr::include_graphics("Mathew_and_Pereault.png") #  WNAI-D paper
 ---
 ## Research question
 
-* Can we predict 'economic complexity' (or a proxy thereof).
+* Can we predict 'economic complexity' (or a proxy thereof)?
 
 --
 
@@ -158,10 +158,10 @@ Some key benefits:
 "More precisely, it measures the difference between the OOB error rate after and before permuting the values of the predictor of interest. ...  The idea underlying this VIM is the following: If the predictor is not associated with the response, the permutation of its values has no influence on the classification, and thus also no influence on the error rate. The error rate of the forest is not substantially affected by the permutation and the VI of the predictor takes a value close to zero, indicating no association between the predictor and the response. In contrast, if response and predictor are associated, the permutation of the predictor values destroys this association. **“Knocking out” this predictor by permuting its values results in a worse classification leading to an increased error rate.** The difference in error rates before and after randomly permuting the predictor thus takes a positive value reflecting the high importance of this predictor" Janitza et al. 2013, _BMC Bioinformatics_: p. 3
 
 ---
-## Descriptives
+## Map
 
 
-```{r, out.width = "800px", echo=FALSE, fig.align='center'}
+```{r, out.width = "900px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("Figure1-19-5-edited.png") 
 ```
 
@@ -201,17 +201,35 @@ knitr::include_graphics("zoom-importance.png") #Figure 3
 ```
 
 ---
-## Grouping by broad categories.
+## Grouping by broad categories
 
 ```{r, out.width = "800px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("Figure4A-19-5.png") #Figure 4
+```
+
+---
+## Grouping by narrower categories
+
+```{r, out.width = "800px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("Figure4B-19-5.png") #Figure 4
+```
+
+---
+## Grouping by narrower categories within culture
+
+```{r, out.width = "800px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("Figure4C-19-5-edited.png") #Figure 4
 ```
 
 
 ---
 ## What does it all mean?
 
-* Forests are not really intepretable. Remains a black box. Some sample univariate trees --> note exploratory. (Alternatives are partial dependence plots)
+* Forests are not really interpretable. Remains a black box. Some sample univariate trees --> note exploratory. (Alternatives are partial dependence plots)
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center', fig.cap="https://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning"}
+knitr::include_graphics("machine_learning.png") 
+```
 
 
 ---
@@ -229,6 +247,13 @@ knitr::include_graphics("Figure5B-19-5.png")
 ```
 
 ---
+## Results: Sample tree
+
+```{r, out.width = "800px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("Figure6A-19-5.png") 
+```
+
+---
 ## Conclusion
 
 * Subsistence economy/agriculture best predictors. Unsurprising conclusion perhaps?
@@ -239,7 +264,7 @@ knitr::include_graphics("Figure5B-19-5.png")
 
 --
 
-* (Provided we can meaningfully disentangle). 'Ecology' is on a par with 'culture'
+* (Provided we can meaningfully disentangle). 'Ecology' is on a par with 'culture'.
 
 ---
 ## Limitations
