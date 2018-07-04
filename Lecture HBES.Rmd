@@ -93,7 +93,7 @@ knitr::include_graphics("ethnographic-atlas.png")
 
 --
 
-* With and without 7 variables (country_Codes, Area_Region, SubContinent_Region, Continent, Language_Continent, Old_New_Class, Region)
+* With and without 7 variables (_country_Codes, Area_Region, SubContinent_Region, Continent, Language_Continent, Old_New_Class, Region_)
 
 --
 
@@ -102,7 +102,7 @@ knitr::include_graphics("ethnographic-atlas.png")
 ---
 ## Dependent Variable
 
-* ‘settlement complexity’ (Settlement_Patterns). 
+* ‘settlement complexity’ (_Settlement_Patterns_). 
 
 --
 
