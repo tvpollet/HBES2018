@@ -13,7 +13,7 @@ class: center, middle, inverse, title-slide
 
 # Machine learning demonstrates that ecology is at least as important as culture in predicting societal complexity
 ### Thomas Pollet, Northumbria University &amp; Mathijs van Dijk, Erasmus University Rotterdam
-### 2018-07-03 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2018-07-04 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 
 ---
 
@@ -91,16 +91,11 @@ class: center, middle, inverse, title-slide
 
 --
 
+* With and without 7 variables (country_Codes, Area_Region, SubContinent_Region, Continent, Language_Continent, Old_New_Class, Region)
+
+--
+
 * Two variables in our preliminary analyses (_‘Mean_Size_of_Local_Communities’_ and _‘Jurisdictional_Hierarchy_Beyond_Local_Community’_) --&gt; overlap to a large degree with our dependent variable. 
-
----
-## Coding
-
-* Broad categories: Culture / Ecology / none (e.g., Language class)
-
-* Narrower categories.
-
-* More narrow coding of cultural variables.
 
 ---
 ## Dependent Variable
@@ -114,6 +109,16 @@ class: center, middle, inverse, title-slide
 --
 
 * “Fully migratory or nomadic bands / Separated hamlets where several such form a more or less permanent single community. / Neighborhoods of dispersed family homesteads / Seminomadic communities whose members wander in bands for at least half of the year but occupy a fixed settlement at some season or seasons, e.g., recurrently occupied winter quarters / Semisedentary communities whose members shift from one to another fixed settlement at different seasons or who occupy more  or less permanently a single settlement from which a substantial proportion of the population departs seasonally to occupy shifting camps, e.g., during transhumance. + Compact and relatively permanent settlements, i.e., nucleated villages or towns. / Compact but impermanent settlements, i.e., villages whose location is shifted every few years. / Complex settlements consisting of a nucleated village or town with outlying homesteads or satellite hamlets.” 
+
+---
+## Coding of predictors.
+
+* Broad categories: Culture / Ecology / none (e.g., Language class)
+
+* Narrower categories: Culture: Culture / Culture: Ecology / Ecology: Climate / Ecology: Geography / Ecology: Both
+
+* More narrow coding of cultural variables. (none= not a cultural variable).
+
 
 ---
 ## Method: Ctree (party package)
@@ -154,7 +159,7 @@ Some key benefits:
 
 --
 
-* Analyses suggest that these models are on a par or regularly outperform other machine learning methods (e.g., [Karuna et al. 2008](http://lowrank.net/nikos/pubs/empirical.pdf)). [Lay explanation](https://medium.com/rants-on-machine-learning/the-unreasonable-effectiveness-of-random-forests-f33c3ce28883)
+* Analyses suggest that random forest  models are on a par or regularly outperform other machine learning methods (e.g., [Karuna et al. 2008](http://lowrank.net/nikos/pubs/empirical.pdf)). [Lay explanation](https://medium.com/rants-on-machine-learning/the-unreasonable-effectiveness-of-random-forests-f33c3ce28883)
 
 --
 
@@ -199,9 +204,6 @@ More information in the [party manual](https://cran.r-project.org/web/packages/p
 
 * Varied 'mtry' (e.g., 46) and 'ntrees' (e.g., N=1,000) qualitatively same results
 
---
-
-* With and without 7 variables (country_Codes, Area_Region, SubContinent_Region, Continent, Language_Continent, Old_New_Class, Region)
 
 ---
 ## Results: Variable importance
@@ -244,15 +246,6 @@ More information in the [party manual](https://cran.r-project.org/web/packages/p
 &lt;/div&gt;
 
 
----
-## Results: Agriculture
-
-&lt;img src="Figure5A-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
- 
----
-## Results: Subsistence economy
-
-&lt;img src="Figure5B-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Results: [Sample tree](https://tvpollet.github.io/HBES2018/Figure6A-19-5.pdf)
@@ -270,7 +263,11 @@ More information in the [party manual](https://cran.r-project.org/web/packages/p
 
 --
 
-* (Provided we can meaningfully disentangle). 'Ecology' is on a par with 'culture'.
+* 'Ecology' is on a par with 'culture' (Provided we can meaningfully disentangle).
+
+--
+
+* Random Forest is useful tool in our toolbox?
 
 ---
 ## Limitations
@@ -300,7 +297,7 @@ More information in the [party manual](https://cran.r-project.org/web/packages/p
 
 --
 
-* A potential reanalysis of WNAI-D? Analysis of [Seshat](http://seshatdatabank.info/)?
+* A potential reanalysis of [WNAI-D](https://github.com/D-PLACE/dplace-data/tree/master/datasets/WNAI)? Analysis of [Seshat](http://seshatdatabank.info/)?
 
 --
 
@@ -344,6 +341,16 @@ Put each case left out in the construction of the kth tree down the kth tree to 
 * This approach does not overfit.
 
 *  "This statistical approach ensures that the right sized tree is grown and no form of pruning or cross-validation or whatsoever is needed." (from [here](https://cran.r-project.org/web/packages/party/party.pdf))
+
+---
+## Results: Agriculture
+
+&lt;img src="Figure5A-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
+ 
+---
+## Results: Subsistence economy
+
+&lt;img src="Figure5B-19-5.png" width="800px" style="display: block; margin: auto;" /&gt;
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
