@@ -254,7 +254,7 @@ knitr::include_graphics("Figure4C-19-5-edited.png") #Figure 4
 
 --
 
-* Some sample univariate trees --> note exploratory. (Alternative: partial dependence plots).
+* A sample tree --> note exploratory. (Alternative: partial dependence plots).
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center', fig.cap="https://www.explainxkcd.com/wiki/index.php/1838:_Machine_Learning"}
 knitr::include_graphics("machine_learning.png") 
