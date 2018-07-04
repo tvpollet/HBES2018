@@ -382,3 +382,8 @@ knitr::include_graphics("Figure5A-19-5.png")
 ```{r, out.width = "800px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("Figure5B-19-5.png") 
 ```
+
+---
+## Labels: coding
+
+Up for debate obviously. [Download Here](https://tvpollet.github.io/HBES2018/labels.xlsx)
