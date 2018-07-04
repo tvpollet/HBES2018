@@ -44,7 +44,7 @@ knitr::include_graphics("modern-family.gif")
 
 --
 
-* What are the necessary preconditions for societal complexity / state formation.
+* What are the necessary preconditions for societal complexity / state formation?
 
 ---
 ## Ongoing related debate in anthropology?
@@ -85,7 +85,7 @@ knitr::include_graphics("ethnographic-atlas.png")
 
 --
 
-*  Some variables which were derived from other variables 
+*  Some variables which were derived from other variables. 
 
 --
 
@@ -113,7 +113,7 @@ knitr::include_graphics("ethnographic-atlas.png")
 * “Fully migratory or nomadic bands / Separated hamlets where several such form a more or less permanent single community. / Neighborhoods of dispersed family homesteads / Seminomadic communities whose members wander in bands for at least half of the year but occupy a fixed settlement at some season or seasons, e.g., recurrently occupied winter quarters / Semisedentary communities whose members shift from one to another fixed settlement at different seasons or who occupy more  or less permanently a single settlement from which a substantial proportion of the population departs seasonally to occupy shifting camps, e.g., during transhumance. + Compact and relatively permanent settlements, i.e., nucleated villages or towns. / Compact but impermanent settlements, i.e., villages whose location is shifted every few years. / Complex settlements consisting of a nucleated village or town with outlying homesteads or satellite hamlets.” 
 
 ---
-## Coding of predictors.
+## Coding of predictors
 
 * Broad categories: Culture / Ecology / none (e.g., Language class)
 
@@ -177,7 +177,7 @@ Some key benefits:
 More information in the [party manual](https://cran.r-project.org/web/packages/party/party.pdf) and [here](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-307) and [here](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-119)
 
 ---
-## Map
+## [Map](https://tvpollet.github.io/HBES2018/Figure1-19-5-edited.png)
 
 
 ```{r, out.width = "900px", echo=FALSE, fig.align='center'}
@@ -212,7 +212,7 @@ knitr::include_graphics("Figure2-19-5.png")
 
 
 ---
-## Results: Variable importance
+## Results: [Variable importance](https://tvpollet.github.io/HBES2018/Figure3-panelled-19-5-edited.png)
 
 ```{r, out.width = "500px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("Figure3-panelled-19-5-edited.png") #Figure 3
@@ -343,6 +343,8 @@ knitr::include_graphics("https://media.giphy.com/media/3ohzdRoOp1FUYbtGDu/giphy.
 ##Acknowledgments
 
 * Funded by [NIAS](http://nias.knaw.nl) (and in past by [NWO](www.nwo.nl), [Templeton](www.templeton.org)).
+
+* slides made with [xaringan](https://github.com/yihui/xaringan).
 
 * You for listening!
 
